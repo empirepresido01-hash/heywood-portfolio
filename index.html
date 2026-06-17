@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A clean personal portfolio for showcasing selected work, skills, and contact details."
+    />
+    <title>Heywood David | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Go to home">
+        <span class="brand-mark">HD</span>
+        <span>Heywood David</span>
+      </a>
+      <div class="header-actions">
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
+          <svg class="theme-icon moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 14.7A8.5 8.5 0 0 1 9.3 3a7 7 0 1 0 11.7 11.7Z" />
+          </svg>
+          <svg class="theme-icon sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 18a6 6 0 1 0 0-12 6 6 0 0 0 0 12Zm0-16 1.2 3h-2.4L12 2Zm0 20-1.2-3h2.4L12 22ZM2 12l3-1.2v2.4L2 12Zm20 0-3 1.2v-2.4L22 12ZM4.2 4.2l3 1.3-1.7 1.7-1.3-3Zm15.6 15.6-3-1.3 1.7-1.7 1.3 3Zm0-15.6-1.3 3-1.7-1.7 3-1.3ZM4.2 19.8l1.3-3 1.7 1.7-3 1.3Z" />
+          </svg>
+        </button>
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="hero-brand">
+            <p>Heywood David</p>
+            <strong>𝕰𝖒𝖕𝖎𝖗𝖊 𝕻𝖗𝖊𝖘𝖎𝖉𝖔</strong>
+          </div>
+          <p class="eyebrow">Portfolio</p>
+          <h1>Visual stories, sharp edits, and clean digital experiences.</h1>
+          <p class="hero-text">
+            I bring ideas to life through cinematography, graphics, sound, video editing, and
+            frontend development, creating work that feels polished, intentional, and ready for the
+            audience it was made for.
+          </p>
+          <div class="hero-actions" aria-label="Portfolio actions">
+            <a class="button primary" href="#skills">View skills</a>
+            <a class="button secondary" href="mailto:empirepresido01@gmail.com">Email me</a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-label="Portfolio preview">
+          <div class="profile-card">
+            <img class="avatar" src="public/img/img1.jpg" alt="Portrait of Heywood David" />
+            <div>
+              <p class="profile-name">Heywood David</p>
+              <p class="profile-role">Cinematographer, Graphics Creator and Frontend Developer</p>
+            </div>
+          </div>
+          <div class="preview-window">
+            <div class="window-bar">
+              <span></span>
+              <span></span> 
+              <span></span>
+            </div>
+            <div class="preview-grid">
+              <div class="preview-panel tall image-panel">
+                <img src="public/tools and projects panel/adobe audition.webp" alt="Adobe Audition" />
+              </div>
+              <div class="preview-panel image-panel">
+                <img src="public/tools and projects panel/adobe pr.webp" alt="Adobe Premiere Pro" />
+              </div>
+              <div class="preview-panel accent image-panel">
+                <img src="public/tools and projects panel/davinci.jpg" alt="DaVinci Resolve" />
+              </div>
+              <div class="preview-panel wide vscode-panel">
+                <span>VS CODE</span>
+              </div>
+            </div>
+          </div>
+          <div class="metric-strip">
+            <div>
+              <strong>12+</strong>
+              <span>Projects</span>
+            </div>
+            <div>
+              <strong>4</strong>
+              <span>Core tools</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="logo-section" aria-label="Personal logo">
+        <div class="logo-lockup">
+          <img src="public/img/img1.jpg" alt="Heywood David logo" />
+          <div>
+            <p class="eyebrow">Personal Brand</p>
+            <h2>Heywood David</h2>
+            <p>Cinematographer, graphics creative, and frontend developer creating clean, responsive, and professional visual experiences.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section gallery-section" aria-label="Picture slides">
+        <div class="section-heading">
+          <p class="eyebrow">Gallery</p>
+          <h2>Moments, frames, and creative work in view.</h2>
+        </div>
+        <div class="slide-gallery" aria-label="Continuous gallery slider">
+          <div class="slide-track">
+            <div class="slide-placeholder"><img src="public/picture slide/slide1.jpg" alt="Gallery image 01" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide2.jpg" alt="Gallery image 02" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide3.jpg" alt="Gallery image 03" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide4.jpg" alt="Gallery image 04" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide5.jpg" alt="Gallery image 05" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide6.jpg" alt="Gallery image 06" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide7.png" alt="Gallery image 07" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide8.jpg" alt="Gallery image 08" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide9.jpg" alt="Gallery image 09" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide10.jpg" alt="Gallery image 10" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide11.png" alt="Gallery image 11" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide12.jpg" alt="Gallery image 12" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide13.jpg" alt="Gallery image 13" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide14.png" alt="Gallery image 14" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide15.jpg" alt="Gallery image 15" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide16.png" alt="Gallery image 16" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide17.jpg" alt="Gallery image 17" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide18.png" alt="Gallery image 18" /></div>
+            <div class="slide-placeholder"><img src="public/picture slide/slide19.jpg" alt="Gallery image 19" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide1.jpg" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide2.jpg" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide3.jpg" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide4.jpg" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide5.jpg" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide6.jpg" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide7.png" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide8.jpg" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide9.jpg" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide10.jpg" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide11.png" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide12.jpg" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide13.jpg" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide14.png" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide15.jpg" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide16.png" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide17.jpg" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide18.png" alt="" /></div>
+            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide19.jpg" alt="" /></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section split" id="skills">
+        <div class="section-heading">
+          <p class="eyebrow">Skills</p>
+          <h2>What I can help with.</h2>
+        </div>
+        <div class="skill-list">
+          <div class="skill-item">
+            <h3>Cinematographer</h3>
+            <p>I craft visuals that speak. Through light, composition, and movement, I turn ideas into cinematic frames that carry mood, depth, and intention. Every shot is deliberate-built to tell a story, not just capture one.</p>
+          </div>
+          <div class="skill-item">
+            <h3>Sound Engineer</h3>  
+            <p>I shape sound that feels real. From clean recordings to immersive mixes, I build audio that adds weight and emotion to every project. Precision, clarity, and atmosphere drive everything I create, using tools like Pro Tools.</p>
+          </div>
+          <div class="skill-item">
+            <h3>Video Editor</h3>
+            <p>I cut with purpose. I take raw footage and turn it into sharp, engaging stories through pacing, rhythm, and visual flow. Clean transitions, strong color, and tight edits—delivered using Adobe Premiere Pro and DaVinci Resolve.</p>
+          </div>
+          <div class="skill-item">
+            <h3>Front-End Developer</h3>
+            <p>I build digital experiences that work and look right. Clean code, responsive layouts, and smooth interactions-focused on clarity and performance. I turn ideas into functional interfaces using Next.js.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section about watermark-section watermark-about" id="about" data-watermark="𝕰𝖒𝖕𝖎𝖗𝖊 𝕻𝖗𝖊𝖘𝖎𝖉𝖔">
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>My story, my craft, and the vision behind the work.</h2>
+        </div>
+        <p>
+            <strong>
+          Heywood Lenwii David is a multidisciplinary creative from Ka-Lorre Town in Khana Local
+          Government Area, Ogoni, Rivers State, Nigeria. Born on the 10th of October, 2003. his
+          journey reflects a strong passion for media production, visual storytelling, and digital
+          creativity. He has worked with several media production companies, including Joonwyyt
+          Entertainment and BCS Starcross Television, gaining top-notch experience in event coverage,
+          movie production, sound engineering, music videos, video and sound editing, graphics
+          design, and frontend development. His work blends creativity, technical skill, and a clear
+          commitment to producing professional results across both visual and digital platforms.
+          </strong>
+        </p>
+      </section>
+
+      <section class="contact watermark-section watermark-center" id="contact" data-watermark="𝕰𝖒𝖕𝖎𝖗𝖊 𝕻𝖗𝖊𝖘𝖎𝖉𝖔">
+        <p class="eyebrow">Contact</p>
+        <h2>Have a project or opportunity in mind?</h2>
+        <p>Send a message and I will get back to you with next steps.</p>
+        <a class="button primary" href="mailto:empirepresido01@gmail.com">empirepresido01@gmail.com</a>
+      </section>
+    </main>
+    
+    <footer class="site-footer">
+      <p>© <span id="year"></span> Heywood Lenwii David. All rights reserved.</p>
+      <div class="social-links" aria-label="Social links">
+        <a class="social-icon" href="https://www.linkedin.com/in/heywood-david-98ab97397/" rel="noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.9 8.9H3.4V21h3.5V8.9ZM5.1 3A2.1 2.1 0 1 0 5 7.2 2.1 2.1 0 0 0 5.1 3Zm7.5 5.9H9.2V21h3.5v-6.4c0-1.7.3-3.3 2.4-3.3 2 0 2 1.9 2 3.4V21h3.5v-7.1c0-3.5-.8-6.1-4.8-6.1-1.9 0-3.2 1-3.7 2h-.1l-.1-1.7Z" />
+          </svg>
+          <span>LinkedIn</span>
+        </a>
+        <a class="social-icon" href="https://www.facebook.com/woodydavyz.snr" rel="noreferrer" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M14 8.5h2.1V5.2c-.4-.1-1.7-.2-3.1-.2-3.1 0-5.2 1.9-5.2 5.4v3H4.5V17h3.3v7h4v-7h3.3l.5-3.6h-3.8v-2.6c0-1 .3-2.3 2.2-2.3Z" />
+          </svg>
+          <span>Facebook</span>
+        </a>
+        <a class="social-icon" href="https://www.instagram.com/empirepresido01/?hl=en" rel="noreferrer" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2Zm0 2A3.8 3.8 0 0 0 4 7.8v8.4A3.8 3.8 0 0 0 7.8 20h8.4a3.8 3.8 0 0 0 3.8-3.8V7.8A3.8 3.8 0 0 0 16.2 4H7.8Zm4.2 3.4A4.6 4.6 0 1 1 7.4 12 4.6 4.6 0 0 1 12 7.4Zm0 2A2.6 2.6 0 1 0 14.6 12 2.6 2.6 0 0 0 12 9.4Zm5-2.1a1.1 1.1 0 1 1-1.1 1.1A1.1 1.1 0 0 1 17 7.3Z" />
+          </svg>
+          <span>Instagram</span>
+        </a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

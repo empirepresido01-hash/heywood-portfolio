@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Uploads | Heywood David</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .admin-page {
+        min-height: 100vh;
+        padding: clamp(32px, 6vw, 80px);
+      }
+
+      .admin-shell {
+        max-width: 980px;
+        margin: 0 auto;
+      }
+
+      .upload-form,
+      .upload-list {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--surface);
+        padding: clamp(20px, 4vw, 32px);
+      }
+
+      .upload-form {
+        display: grid;
+        gap: 16px;
+        margin: 28px 0;
+      }
+
+      .form-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      label {
+        display: grid;
+        gap: 8px;
+        color: var(--muted);
+        font-weight: 700;
+      }
+
+      input,
+      select {
+        min-height: 46px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--bg);
+        color: var(--ink);
+        padding: 0 14px;
+        font: inherit;
+      }
+
+      .upload-list {
+        display: grid;
+        gap: 14px;
+      }
+
+      .upload-item {
+        display: grid;
+        grid-template-columns: 72px minmax(0, 1fr);
+        gap: 14px;
+        align-items: center;
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 14px;
+      }
+
+      .upload-item:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .upload-item img {
+        width: 72px;
+        height: 72px;
+        border-radius: 8px;
+        object-fit: cover;
+      }
+
+      .upload-item p {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 620px) {
+        .form-grid,
+        .upload-item {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="admin-page">
+      <div class="admin-shell">
+        <p class="eyebrow">Backend</p>
+        <h1>Portfolio Upload Manager</h1>
+        <p class="hero-text">
+          Upload gallery images, tools, projects, portrait files, and documents for later use on the
+          website.
+        </p>
+
+        <form class="upload-form" id="uploadForm">
+          <div class="form-grid">
+            <label>
+              Title
+              <input name="title" type="text" placeholder="Project title or file name" />
+            </label>
+            <label>
+              Category
+              <select name="category">
+                <option value="gallery">Gallery</option>
+                <option value="tools">Tools</option>
+                <option value="projects">Projects</option>
+                <option value="portrait">Portrait</option>
+                <option value="documents">Documents</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            File
+            <input name="file" type="file" required />
+          </label>
+          <button class="button primary" type="submit">Upload file</button>
+          <p id="statusMessage"></p>
+        </form>
+
+        <section class="upload-list" id="uploadList" aria-label="Uploaded files"></section>
+      </div>
+    </main>
+
+    <script>
+      const form = document.querySelector("#uploadForm");
+      const list = document.querySelector("#uploadList");
+      const statusMessage = document.querySelector("#statusMessage");
+
+      async function loadUploads() {
+        const response = await fetch("/api/uploads");
+        const uploads = await response.json();
+
+        list.innerHTML = uploads.length
+          ? uploads.map((upload) => `
+              <article class="upload-item">
+                ${upload.mimeType.startsWith("image/") ? `<img src="${upload.url}" alt="">` : "<div></div>"}
+                <div>
+                  <strong>${upload.title}</strong>
+                  <p>${upload.category} - ${upload.originalName}</p>
+                </div>
+              </article>
+            `).join("")
+          : "<p>No uploads yet.</p>";
+      }
+
+      form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        statusMessage.textContent = "Uploading...";
+
+        const response = await fetch("/api/uploads", {
+          method: "POST",
+          body: new FormData(form)
+        });
+
+        if (!response.ok) {
+          const result = await response.json();
+          statusMessage.textContent = result.error || "Upload failed.";
+          return;
+        }
+
+        form.reset();
+        statusMessage.textContent = "Upload complete.";
+        await loadUploads();
+      });
+
+      loadUploads();
+    </script>
+  </body>
+</html>
