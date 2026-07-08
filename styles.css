@@ -786,7 +786,7 @@ h3 {
 @media (max-width: 768px) {
     .about {
        
-        background-position: center top;
+        background-position: center left;
     }
 }
 
@@ -804,7 +804,7 @@ h3 {
 }
 
 :root {
-  --about-text: #171717;
+  --about-text: #ffffff;
 }
 
 [data-theme="dark"] {
