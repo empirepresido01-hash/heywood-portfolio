@@ -32,6 +32,3 @@ navLinks.addEventListener("click", (event) => {
     navToggle.setAttribute("aria-expanded", "false");
   }
 });
-
-
-import { Analytics } from "@vercel/analytics/next"
