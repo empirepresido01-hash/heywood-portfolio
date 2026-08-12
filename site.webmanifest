@@ -1,0 +1,16 @@
+{
+  "name": "Heywood Lenwii David Portfolio",
+  "short_name": "HD Portfolio",
+  "description": "Multidisciplinary creative portfolio for Heywood Lenwii David.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4efe8",
+  "theme_color": "#0b0b0d",
+  "icons": [
+    {
+      "src": "/public/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

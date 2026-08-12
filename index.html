@@ -5,23 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="A clean personal portfolio for showcasing selected work, skills, and contact details."
+      content="Heywood Lenwii David is a multidisciplinary creative combining cinematography, sound, video editing, graphics, and frontend development in polished digital experiences."
     />
-    <title>Heywood David | Portfolio</title>
+    <meta name="theme-color" content="#0b0b0d" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="author" content="Heywood Lenwii David" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Heywood Lenwii David | Portfolio" />
+    <meta property="og:description" content="Creative portfolio featuring visual storytelling, design, editing, and frontend work." />
+    <meta property="og:image" content="https://your-production-domain.com/public/img/img1.jpg" />
+    <meta property="og:url" content="https://your-production-domain.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Heywood Lenwii David | Portfolio" />
+    <meta name="twitter:description" content="Creative portfolio featuring visual storytelling, design, editing, and frontend work." />
+    <meta name="twitter:image" content="https://your-production-domain.com/public/img/img1.jpg" />
+    <link rel="canonical" href="https://your-production-domain.com/" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" href="/public/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Heywood Lenwii David",
+        "alternateName": "Heywood Lenwii David",
+        "jobTitle": ["Cinematographer", "Video Editor", "Graphics Creative", "Frontend Developer"],
+        "url": "https://your-production-domain.com/",
+        "email": "mailto:empirepresido01@gmail.com",
+        "sameAs": [
+          "https://www.linkedin.com/in/heywood-david-98ab97397/",
+          "https://www.facebook.com/woodydavyz.snr",
+          "https://www.instagram.com/empirepresido01/?hl=en"
+        ],
+        "description": "Multidisciplinary creative based in Rivers State, Nigeria, focused on visual storytelling, sound, graphics, and frontend experiences."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Heywood Lenwii David Portfolio",
+        "url": "https://your-production-domain.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://your-production-domain.com/#contact",
+          "query-input": "required name=search_term"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://your-production-domain.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Skills", "item": "https://your-production-domain.com/#skills" },
+          { "@type": "ListItem", "position": 3, "name": "About", "item": "https://your-production-domain.com/#about" },
+          { "@type": "ListItem", "position": 4, "name": "Contact", "item": "https://your-production-domain.com/#contact" }
+        ]
+      }
+    </script>
+    <title>Heywood Lenwii David | Portfolio</title>
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
     <header class="site-header">
       <a class="brand" href="#home" aria-label="Go to home">
         <span class="brand-mark">HD</span>
-        <span>Heywood David</span>
+        <span>Heywood Lenwii David</span>
       </a>
+
       <div class="header-actions">
         <button class="theme-toggle" type="button" aria-label="Switch to dark mode">
           <svg class="theme-icon moon-icon" viewBox="0 0 24 24" aria-hidden="true">
@@ -34,190 +94,179 @@
         <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
           <span></span>
           <span></span>
+          <span></span>
         </button>
       </div>
+
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#skills">Skills</a>
+        <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <main id="home">
-      <section class="hero">
+    <main id="main-content">
+      <section class="hero" id="home" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <div class="hero-brand">
-            <p>Heywood David</p>
-            <strong>𝕰𝖒𝖕𝖎𝖗𝖊 𝕻𝖗𝖊𝖘𝖎𝖉𝖔</strong>
-          </div>
           <p class="eyebrow">Portfolio</p>
-          <h1>Visual stories, sharp edits, and clean digital experiences.</h1>
+          <h1 id="hero-title">Visual stories, sharp edits, and refined digital experiences.</h1>
           <p class="hero-text">
             I bring ideas to life through cinematography, graphics, sound, video editing, and
-            frontend development, creating work that feels polished, intentional, and ready for the
+            frontend development—creating work that feels polished, intentional, and ready for the
             audience it was made for.
           </p>
-          <div class="hero-actions" aria-label="Portfolio actions">
-            <a class="button primary" href="#skills">View skills</a>
+          <div class="hero-actions">
+            <a class="button primary" href="#skills">Explore my skills</a>
             <a class="button secondary" href="mailto:empirepresido01@gmail.com">Email me</a>
           </div>
-        </div>
-        <div class="hero-visual" aria-label="Portfolio preview">
-          <div class="profile-card">
-            <img class="avatar" src="public/img/img1.jpg" alt="Portrait of Heywood David" />
+          <dl class="hero-stats" aria-label="Key portfolio metrics">
             <div>
-              <p class="profile-name">Heywood David</p>
-              <p class="profile-role">Cinematographer, Graphics Creator and Frontend Developer</p>
+              <dt>32+</dt>
+              <dd>Projects shipped</dd>
             </div>
-          </div>
-          <div class="preview-window">
-            <div class="window-bar">
-              <span></span>
-              <span></span> 
-              <span></span>
+            <div>
+              <dt>4</dt>
+              <dd>Core creative disciplines</dd>
+            </div>
+            <div>
+              <dt>100%</dt>
+              <dd>Responsive delivery</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-label="Portfolio preview">
+          <article class="profile-card">
+            <img
+              class="avatar"
+              src="/public/img/img1.jpg"
+              alt="Portrait of Heywood Lenwii David"
+              width="96"
+              height="96"
+              loading="eager"
+              decoding="async"
+            />
+            <div>
+              <p class="profile-name">Heywood Lenwii David</p>
+              <p class="profile-role">Cinematographer, graphics creator, and frontend developer</p>
+            </div>
+          </article>
+
+          <div class="preview-window" aria-label="Creative tool panel preview">
+            <div class="window-bar" aria-hidden="true">
+              <span></span><span></span><span></span>
             </div>
             <div class="preview-grid">
               <div class="preview-panel tall image-panel">
-                <img src="public/tools and projects panel/adobe audition.webp" alt="Adobe Audition" />
+                <img src="/public/tools and projects panel/adobe audition.webp" alt="Adobe Audition workspace" width="640" height="640" loading="lazy" decoding="async" />
               </div>
               <div class="preview-panel image-panel">
-                <img src="public/tools and projects panel/adobe pr.webp" alt="Adobe Premiere Pro" />
+                <img src="/public/tools and projects panel/adobe pr.webp" alt="Adobe Premiere Pro timeline" width="640" height="640" loading="lazy" decoding="async" />
               </div>
               <div class="preview-panel accent image-panel">
-                <img src="public/tools and projects panel/davinci.jpg" alt="DaVinci Resolve" />
+                <img src="/public/tools and projects panel/davinci.jpg" alt="DaVinci Resolve interface" width="640" height="640" loading="lazy" decoding="async" />
               </div>
               <div class="preview-panel wide vscode-panel">
                 <span>VS CODE</span>
               </div>
             </div>
           </div>
-          <div class="metric-strip">
-            <div>
-              <strong>12+</strong>
-              <span>Projects</span>
-            </div>
-            <div>
-              <strong>4</strong>
-              <span>Core tools</span>
-            </div>
-          </div>
         </div>
       </section>
 
-      <section class="logo-section" aria-label="Personal logo">
-        <div class="logo-lockup">
-          <img src="public/img/img1.jpg" alt="Heywood David logo" />
+      <section class="brand-band" aria-label="Your personal brand summary">
+        <div class="brand-band__content">
           <div>
             <p class="eyebrow">Personal Brand</p>
-            <h2>Heywood David</h2>
-            <p>Cinematographer, graphics creative, and frontend developer creating clean, responsive, and professional visual experiences.</p>
+            <h2>Heywood Lenwii David</h2>
           </div>
+          <p>
+            Cinematographer, graphics creative, and frontend developer crafting clean, responsive, and professional experiences.
+          </p>
         </div>
       </section>
 
-      <section class="section gallery-section" aria-label="Picture slides">
+      <section class="section" id="work" aria-labelledby="work-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="work-title">Focused on storytelling, craft, and thoughtful execution.</h2>
+        </div>
+        <div class="card-grid">
+          <article class="info-card">
+            <h3>Motion-first storytelling</h3>
+            <p>From event coverage to music videos and brand visuals, thoughtful pacing and cinematic framing shape every delivery.</p>
+          </article>
+          <article class="info-card">
+            <h3>Polished digital products</h3>
+            <p>Responsive interfaces and thoughtful UX patterns turn creative ideas into seamless experiences for audiences and clients alike.</p>
+          </article>
+          <article class="info-card">
+            <h3>Cross-disciplinary execution</h3>
+            <p>Sound, visuals, and code are blended with care so each project feels cohesive, modern, and ready to perform.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section gallery-section" aria-labelledby="gallery-title">
         <div class="section-heading">
           <p class="eyebrow">Gallery</p>
-          <h2>Moments, frames, and creative work in view.</h2>
+          <h2 id="gallery-title">Moments, frames, and creative work in view.</h2>
         </div>
-        <div class="slide-gallery" aria-label="Continuous gallery slider">
-          <div class="slide-track">
-            <div class="slide-placeholder"><img src="public/picture slide/slide1.jpg" alt="Gallery image 01" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide2.jpg" alt="Gallery image 02" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide3.jpg" alt="Gallery image 03" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide4.jpg" alt="Gallery image 04" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide5.jpg" alt="Gallery image 05" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide6.jpg" alt="Gallery image 06" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide7.png" alt="Gallery image 07" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide8.jpg" alt="Gallery image 08" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide9.jpg" alt="Gallery image 09" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide10.jpg" alt="Gallery image 10" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide11.png" alt="Gallery image 11" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide12.jpg" alt="Gallery image 12" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide13.jpg" alt="Gallery image 13" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide14.png" alt="Gallery image 14" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide15.jpg" alt="Gallery image 15" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide16.png" alt="Gallery image 16" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide17.jpg" alt="Gallery image 17" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide18.png" alt="Gallery image 18" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide19.jpg" alt="Gallery image 19" /></div>
-            <div class="slide-placeholder"><img src="public/picture slide/slide20.png" alt="Gallery image 20" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide1.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide2.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide3.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide4.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide5.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide6.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide7.png" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide8.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide9.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide10.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide11.png" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide12.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide13.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide14.png" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide15.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide16.png" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide17.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide18.png" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide19.jpg" alt="" /></div>
-            <div class="slide-placeholder" aria-hidden="true"><img src="public/picture slide/slide20.png" alt="" /></div>
-          </div>
+        <div class="gallery-slider" aria-label="Continuous gallery slider">
+          <div class="gallery-track" id="galleryTrack"></div>
+        </div>
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+          <button class="lightbox-close" type="button" aria-label="Close preview">×</button>
+          <img id="lightboxImage" src="" alt="" />
         </div>
       </section>
 
-      <section class="section split" id="skills">
+      <section class="section" id="skills" aria-labelledby="skills-title">
         <div class="section-heading">
           <p class="eyebrow">Skills</p>
-          <h2>What I can help with.</h2>
+          <h2 id="skills-title">What I can help with.</h2>
         </div>
         <div class="skill-list">
-          <div class="skill-item">
-            <h3>Cinematographer</h3>
-            <p>I craft visuals that speak. Through light, composition, and movement, I turn ideas into cinematic frames that carry mood, depth, and intention. Every shot is deliberate-built to tell a story, not just capture one.</p>
-          </div>
-          <div class="skill-item">
-            <h3>Sound Engineer</h3>  
-            <p>I shape sound that feels real. From clean recordings to immersive mixes, I build audio that adds weight and emotion to every project. Precision, clarity, and atmosphere drive everything I create, using tools like Pro Tools.</p>
-          </div>
-          <div class="skill-item">
-            <h3>Video Editor</h3>
-            <p>I cut with purpose. I take raw footage and turn it into sharp, engaging stories through pacing, rhythm, and visual flow. Clean transitions, strong color, and tight edits—delivered using Adobe Premiere Pro and DaVinci Resolve.</p>
-          </div>
-          <div class="skill-item">
-            <h3>Front-End Developer</h3>
-            <p>I build digital experiences that work and look right. Clean code, responsive layouts, and smooth interactions-focused on clarity and performance. I turn ideas into functional interfaces using Next.js.</p>
-          </div>
+          <article class="skill-card">
+            <h3>Cinematography</h3>
+            <p>Crafting deliberate visuals through light, movement, and composition so every frame feels composed and intentional.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Sound engineering</h3>
+            <p>Shaping clean recordings and immersive mixes that add atmosphere, emotion, and clarity to every project.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Video editing</h3>
+            <p>Editing raw footage into sharp, engaging stories with rhythm, pacing, color, and intention.</p>
+          </article>
+          <article class="skill-card">
+            <h3>Frontend development</h3>
+            <p>Building accessible, responsive web experiences that balance performance, aesthetics, and maintainability.</p>
+          </article>
         </div>
       </section>
 
-      <section class="section about watermark-section watermark-about" id="about" data-watermark="𝕰𝖒𝖕𝖎𝖗𝖊 𝕻𝖗𝖊𝖘𝖎𝖉𝖔">
-        <div>
-          <p class="eyebrow">About</p>
-          <h2>My story, my craft, and the vision behind the work.</h2>
+      <section class="section about-panel" id="about" aria-labelledby="about-title">
+        <div class="about-panel__content">
+          <div>
+            <p class="eyebrow">About</p>
+            <h2 id="about-title">My story, my craft, and the vision behind the work.</h2>
+          </div>
+          <p>
+            Heywood Lenwii David is a multidisciplinary creative from Ka-Lorre Town in Khana Local Government Area, Ogoni, Rivers State, Nigeria. His journey reflects a strong passion for media production, visual storytelling, and digital creativity, shaped through work with production houses such as Joonwyyt Entertainment and BCS Starcross Television.
+          </p>
         </div>
-        <p>
-            <strong>
-          Heywood Lenwii David is a multidisciplinary creative from Ka-Lorre Town in Khana Local
-          Government Area, Ogoni, Rivers State, Nigeria. Born on the 10th of October, 2003. his
-          journey reflects a strong passion for media production, visual storytelling, and digital
-          creativity. He has worked with several media production companies, including Joonwyyt
-          Entertainment and BCS Starcross Television, gaining top-notch experience in event coverage,
-          movie production, sound engineering, music videos, video and sound editing, graphics
-          design, and frontend development. His work blends creativity, technical skill, and a clear
-          commitment to producing professional results across both visual and digital platforms.
-          </strong>
-        </p>
       </section>
 
-      <section class="contact watermark-section watermark-center" id="contact" data-watermark="𝕰𝖒𝖕𝖎𝖗𝖊 𝕻𝖗𝖊𝖘𝖎𝖉𝖔">
+      <section class="section contact-panel" id="contact" aria-labelledby="contact-title">
         <p class="eyebrow">Contact</p>
-        <h2>Have a project or opportunity in mind?</h2>
+        <h2 id="contact-title">Have a project or opportunity in mind?</h2>
         <p>Send a message and I will get back to you with next steps.</p>
         <a class="button primary" href="mailto:empirepresido01@gmail.com">empirepresido01@gmail.com</a>
       </section>
     </main>
-    
+
     <footer class="site-footer">
       <p>© <span id="year"></span> Heywood Lenwii David. All rights reserved.</p>
       <div class="social-links" aria-label="Social links">
@@ -242,6 +291,6 @@
       </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>

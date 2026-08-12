@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://your-vercel-url.vercel.app/sitemap.xml
+Sitemap: https://your-production-domain.com/sitemap.xml
+
+# Prefer fast discovery of the primary portfolio pages.
+Disallow: /backend/
+Disallow: /public/uploads/

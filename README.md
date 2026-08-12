@@ -1,12 +1,17 @@
 # Portfolio Website
 
-A clean static portfolio site ready to deploy on Vercel.
+A refined, production-ready portfolio site for Heywood Lenwii David, designed for modern browsing, accessibility, and deployment on Vercel.
 
-## Backend Upload Scaffold
+## What changed
 
-This project now includes a Node/Express backend for future uploads.
+- Rebuilt the homepage into a premium 2026-style portfolio layout with stronger hierarchy and spacing.
+- Introduced a responsive, accessible component system for hero, cards, gallery, about, contact, and footer sections.
+- Added SEO metadata, schema markup, a web manifest, and improved robots/sitemap configuration.
+- Refactored the frontend script into maintainable, theme-aware interaction logic.
+- Extracted file utility logic into a small backend module and added regression tests.
+- Added security headers and deployment-friendly Vercel configuration.
 
-### Run Locally
+## Run locally
 
 Install dependencies:
 
@@ -14,7 +19,7 @@ Install dependencies:
 npm install
 ```
 
-Start the backend and portfolio:
+Start the app:
 
 ```bash
 npm run dev
@@ -22,56 +27,38 @@ npm run dev
 
 Open:
 
-- Portfolio: `http://localhost:5500`
-- Upload manager: `http://localhost:5500/admin.html`
-- Upload API health check: `http://localhost:5500/api/health`
+- Portfolio: http://localhost:5500
+- Upload manager: http://localhost:5500/admin.html
+- Upload API health check: http://localhost:5500/api/health
 
-### Upload Categories
+## Tests
 
-Uploaded files are saved under `public/uploads/` in these folders:
+Run the automated regression tests:
 
-- `gallery`
-- `tools`
-- `projects`
-- `portrait`
-- `documents`
+```bash
+npm test
+```
 
-Metadata is saved in `backend/data/uploads.json`.
+## Upload categories
 
-### Production Note
+Uploaded files are saved under public/uploads/ in these folders:
 
-Local uploads work well during development. For production on Vercel, uploaded files should later be connected to permanent cloud storage such as Vercel Blob, Cloudinary, or S3 because serverless file storage is not permanent.
+- gallery
+- tools
+- projects
+- portrait
+- documents
 
-## Customize
+Metadata is stored in backend/data/uploads.json.
 
-Edit `index.html` and replace:
+## Production note
 
-- `Your Name`
-- `YN`
-- `Frontend Developer`
-- `you@example.com`
-- project titles and descriptions
-- LinkedIn and GitHub links
+Local uploads work well during development. For production on Vercel, uploaded files should eventually be moved to persistent cloud storage such as Vercel Blob, Cloudinary, or S3 because serverless file storage is not permanent.
 
-## Deploy To Vercel
+## Deploy to Vercel
 
-1. Create a GitHub repository.
-2. Upload or push these files.
-3. Go to Vercel and choose **Add New > Project**.
-4. Import the GitHub repository.
-5. Keep the framework preset as **Other**.
-6. Use these settings:
-   - Build Command: empty
-   - Output Directory: `.`
-7. Click **Deploy**.
-8. After deployment, replace `https://your-vercel-url.vercel.app` in `robots.txt` and `sitemap.xml` with your real Vercel URL.
-
-## Submit To Google
-
-1. Go to Google Search Console.
-2. Add your Vercel URL as a URL prefix property.
-3. Copy the HTML tag verification code from Google.
-4. Paste the verification meta tag inside the `<head>` of `index.html`.
-5. Redeploy on Vercel.
-6. In Search Console, submit `https://your-vercel-url.vercel.app/sitemap.xml`.
-7. Use URL Inspection for your homepage and click **Request indexing**.
+1. Push the repository to GitHub.
+2. Create a new project on Vercel.
+3. Import the repository with the framework preset set to Other.
+4. Keep the output directory as . and leave build settings empty.
+5. Deploy and replace your-production-domain.com in the SEO files with the real Vercel domain.

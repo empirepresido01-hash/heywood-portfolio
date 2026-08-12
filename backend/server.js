@@ -5,6 +5,7 @@ const path = require("path");
 const cors = require("cors");
 const express = require("express");
 const multer = require("multer");
+const { allowedCategories, allowedMimeTypes, safeCategory, safeBaseName } = require("./file-utils");
 
 const app = express();
 const rootDir = path.resolve(__dirname, "..");
@@ -13,19 +14,6 @@ const uploadRoot = path.join(publicDir, "uploads");
 const dataDir = path.join(rootDir, "backend", "data");
 const metadataPath = path.join(dataDir, "uploads.json");
 const port = Number(process.env.PORT || 5500);
-
-const allowedCategories = new Set(["gallery", "tools", "projects", "portrait", "documents"]);
-const allowedMimeTypes = new Set([
-  "image/jpeg",
-  "image/png",
-  "image/webp",
-  "image/gif",
-  "video/mp4",
-  "video/webm",
-  "audio/mpeg",
-  "audio/wav",
-  "application/pdf"
-]);
 
 function ensureDirectories() {
   fs.mkdirSync(uploadRoot, { recursive: true });
@@ -46,19 +34,6 @@ function readUploads() {
 
 function writeUploads(uploads) {
   fs.writeFileSync(metadataPath, `${JSON.stringify(uploads, null, 2)}\n`);
-}
-
-function safeCategory(value) {
-  return allowedCategories.has(value) ? value : "gallery";
-}
-
-function safeBaseName(fileName) {
-  const parsed = path.parse(fileName);
-  return parsed.name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "")
-    .slice(0, 80) || "upload";
 }
 
 ensureDirectories();
